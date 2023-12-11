@@ -21,7 +21,6 @@ import android.view.MenuItem;
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
-import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.distribute.Distribute;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Distribute.setListener(new MyDistributeListener());
         AppCenter.start(getApplication(), "7cfec8fd-a276-4016-ba2b-eecc90011777",
                 Analytics.class, Crashes.class);
+        AppCenter.start(getApplication(), "7cfec8fd-a276-4016-ba2b-eecc90011777", Distribute.class);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
