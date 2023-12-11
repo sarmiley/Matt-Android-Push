@@ -7,6 +7,6 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="no_updates_available">No updates available</string>
-    <string name="hello_first_fragment">Hi 我馬上又更新一版了啊, v 1.0.1</string>
+    <string name="hello_first_fragment">Hi 我隨便又更新一版了啊, v 1.0.2</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
